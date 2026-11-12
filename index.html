@@ -1,0 +1,640 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>فرهاد حکمت‌دوست | Farhadgrafik</title>
+<meta name="description" content="فرهاد حکمت‌دوست — طراح گرافیک، تدوینگر و موشن گرافیست. رزومه و نمونه‌کارها.">
+<meta property="og:title" content="فرهاد حکمت‌دوست | Farhadgrafik">
+<meta property="og:description" content="طراح گرافیک، تدوینگر و موشن گرافیست — رزومه و نمونه‌کارها">
+<meta property="og:image" content="assets/img/og.jpg">
+<meta name="theme-color" content="#F5F0E8">
+<link rel="icon" href="assets/img/icon.png">
+<link rel="preload" href="assets/fonts/Estedad-900.ttf" as="font" type="font/ttf" crossorigin>
+<style>
+@font-face{font-family:Estedad;src:url(assets/fonts/Estedad-500.ttf) format("truetype");font-weight:400 500;font-display:swap}
+@font-face{font-family:Estedad;src:url(assets/fonts/Estedad-700.ttf) format("truetype");font-weight:600 700;font-display:swap}
+@font-face{font-family:Estedad;src:url(assets/fonts/Estedad-900.ttf) format("truetype");font-weight:800 900;font-display:swap}
+:root{
+  --bg:#F5F0E8; --paper:#FFFCF6; --ink:#1B1416; --ink-2:#4A3F3C; --muted:#7A6D67; --line:#E4DACB;
+  --yellow:#F9BF12; --yellow-soft:#FCE7A6; --crimson:#821A1C; --crimson-2:#A3272A;
+  --night:#141011; --night-2:#1E1819; --night-line:#342A2A; --night-ink:#F3ECE4; --night-muted:#A69690;
+  --r:22px; --gut:clamp(16px,4vw,48px); --max:1200px;
+  --ease:cubic-bezier(.2,.8,.2,1);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:Estedad,Tahoma,sans-serif;background:var(--bg);color:var(--ink);line-height:1.85;font-size:clamp(15px,1.05vw,17px);overflow-x:hidden}
+img,video{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+:focus-visible{outline:3px solid var(--yellow);outline-offset:3px;border-radius:6px}
+html[lang=fa] [lang=en]:not(html),html[lang=en] [lang=fa]:not(html){display:none!important}
+.wrap{max-width:var(--max);margin-inline:auto;padding-inline:var(--gut)}
+.num{font-feature-settings:"ss01"}
+
+/* nav */
+.nav{position:fixed;inset-inline:0;top:0;z-index:50;transition:background .3s,box-shadow .3s}
+.nav.solid{background:rgba(245,240,232,.88);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);box-shadow:0 1px 0 var(--line)}
+.nav .wrap{display:flex;align-items:center;gap:20px;height:68px}
+.nav .logo img{height:30px;width:auto}
+.nav ul{display:flex;gap:4px;list-style:none;margin-inline-start:auto}
+.nav ul a{padding:8px 14px;border-radius:99px;font-weight:600;font-size:.92em;color:var(--ink-2);transition:background .2s,color .2s}
+.nav ul a:hover{background:var(--paper);color:var(--ink)}
+.lang{display:flex;border:1.5px solid var(--ink);border-radius:99px;overflow:hidden;font-weight:700;font-size:.8em}
+.lang button{padding:6px 12px;line-height:1}
+.lang button.on{background:var(--ink);color:var(--bg)}
+@media (max-width:860px){.nav ul{display:none}.lang{margin-inline-start:auto}}
+
+/* hero */
+.hero{position:relative;padding-top:110px;overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(24px,4vw,64px);align-items:end;min-height:min(88vh,820px)}
+.hero-text{padding-bottom:clamp(40px,8vh,96px);align-self:center}
+.kicker{display:inline-flex;align-items:center;gap:10px;font-weight:700;color:var(--crimson);font-size:.95em;margin-bottom:18px}
+.kicker i{width:34px;height:12px;border-radius:99px;background:var(--crimson);display:inline-block}
+.kicker i+i{width:18px;background:var(--yellow);margin-inline-start:-6px}
+h1{font-weight:900;font-size:clamp(42px,7.2vw,96px);line-height:1.12;letter-spacing:-.01em}
+html[lang=en] h1{letter-spacing:-.03em;line-height:1}
+h1 .y{color:var(--crimson)}
+.lead{margin-top:22px;font-size:clamp(17px,1.5vw,21px);color:var(--ink-2);max-width:34em}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:26px}
+.chip{display:inline-flex;align-items:center;gap:8px;padding:7px 14px;border-radius:99px;background:var(--paper);border:1px solid var(--line);font-size:.88em;font-weight:600;color:var(--ink-2)}
+.chip b{width:8px;height:8px;border-radius:50%;background:var(--yellow)}
+.ctas{display:flex;flex-wrap:wrap;align-items:center;gap:12px;margin-top:34px}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:14px 26px;border-radius:99px;font-weight:700;transition:transform .25s var(--ease),box-shadow .25s,background .2s}
+.btn svg{width:18px;height:18px}
+.btn.pri{background:var(--ink);color:var(--bg);box-shadow:0 8px 24px -10px rgba(27,20,22,.6)}
+.btn.pri:hover{transform:translateY(-2px);background:var(--crimson)}
+.btn.ghost{border:1.5px solid var(--ink)}
+.btn.ghost:hover{background:var(--ink);color:var(--bg)}
+.hero-art{position:relative;align-self:end;height:100%;min-height:440px;display:flex;align-items:flex-end;justify-content:center}
+.hero-art .blob{position:absolute;bottom:0;inset-inline:6%;height:78%;background:var(--yellow);border-radius:999px 999px 0 0}
+.hero-art .cap{position:absolute;height:clamp(38px,4.4vw,58px);border-radius:99px;background:var(--crimson)}
+.hero-art .cap.c1{width:46%;top:12%;inset-inline-end:-2%;transform:rotate(-8deg)}
+.hero-art .cap.c2{width:22%;top:26%;inset-inline-start:0;background:var(--ink);transform:rotate(-8deg)}
+.hero-art img{position:relative;width:min(100%,520px);height:auto;filter:drop-shadow(0 20px 30px rgba(60,30,10,.25))}
+.badge{position:absolute;inset-inline-start:2%;bottom:16%;background:var(--paper);border-radius:18px;padding:12px 16px;box-shadow:0 18px 40px -18px rgba(27,20,22,.45);display:flex;gap:12px;align-items:center;font-size:.85em;line-height:1.5}
+.badge strong{font-size:1.9em;font-weight:900;color:var(--crimson);line-height:1}
+@media (max-width:860px){
+  .hero{padding-top:84px}
+  .hero .wrap{grid-template-columns:1fr;min-height:0}
+  .hero-text{padding-bottom:8px}
+  .hero-art{min-height:0;max-width:440px;width:100%;margin-inline:auto}
+  .badge{bottom:10%}
+}
+
+/* sections */
+section{scroll-margin-top:70px}
+.sec{padding-block:clamp(72px,11vw,140px)}
+.eyebrow{font-weight:700;color:var(--crimson);font-size:.9em;display:flex;align-items:center;gap:10px;margin-bottom:12px}
+.eyebrow::before{content:"";width:26px;height:10px;border-radius:99px;background:currentColor}
+h2{font-weight:900;font-size:clamp(30px,4.4vw,56px);line-height:1.2}
+html[lang=en] h2{letter-spacing:-.02em;line-height:1.08}
+.sec-head{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap;margin-bottom:clamp(32px,5vw,56px)}
+.sec-head p{color:var(--muted);max-width:30em}
+
+/* about */
+.about-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:clamp(28px,5vw,72px)}
+.about-text p{font-size:clamp(17px,1.35vw,20px);color:var(--ink-2);margin-bottom:1em}
+.about-text p strong{color:var(--ink)}
+.facts{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-content:start}
+.fact{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:20px}
+.fact span{display:block;color:var(--muted);font-size:.85em}
+.fact strong{display:block;font-weight:800;font-size:1.15em;margin-top:4px;line-height:1.5}
+.fact.big{grid-column:1/-1;background:var(--ink);color:var(--bg);border:0;display:grid;grid-template-columns:repeat(3,1fr);gap:8px;text-align:center}
+.fact.big strong{font-size:clamp(28px,3vw,40px);color:var(--yellow);font-weight:900;line-height:1.2}
+.fact.big span{color:#CDBFB8}
+@media (max-width:860px){.about-grid{grid-template-columns:1fr}}
+
+/* timeline */
+.tl{position:relative;display:grid;gap:16px}
+.job{display:grid;grid-template-columns:200px 1fr;gap:24px;background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:clamp(20px,3vw,34px);transition:transform .3s var(--ease),box-shadow .3s}
+.job:hover{transform:translateY(-3px);box-shadow:0 22px 40px -28px rgba(27,20,22,.4)}
+.job .when{font-weight:800;color:var(--crimson)}
+.job .when small{display:block;color:var(--muted);font-weight:600;font-size:.82em}
+.job h3{font-weight:800;font-size:1.3em;line-height:1.5}
+.job .role{color:var(--ink-2);font-weight:600;margin-bottom:10px}
+.job ul{list-style:none;display:grid;gap:6px;color:var(--ink-2)}
+.job li{position:relative;padding-inline-start:18px}
+.job li::before{content:"";position:absolute;inset-inline-start:0;top:.75em;width:8px;height:8px;border-radius:50%;background:var(--yellow)}
+@media (max-width:700px){.job{grid-template-columns:1fr;gap:8px}}
+
+/* works (dark) */
+.works{background:var(--night);color:var(--night-ink)}
+.works .eyebrow{color:var(--yellow)}
+.works .sec-head p{color:var(--night-muted)}
+.reel{display:grid;grid-template-columns:auto 1fr;gap:clamp(24px,5vw,72px);align-items:center;margin-bottom:clamp(56px,8vw,96px)}
+.phone{position:relative;width:clamp(230px,24vw,300px);aspect-ratio:9/16;border-radius:34px;overflow:hidden;background:#000;box-shadow:0 0 0 8px var(--night-2),0 0 0 9px var(--night-line),0 40px 80px -30px rgba(249,191,18,.35)}
+.phone video{width:100%;height:100%;object-fit:cover}
+.mute{position:absolute;bottom:14px;inset-inline-end:14px;width:44px;height:44px;border-radius:50%;background:rgba(0,0,0,.55);backdrop-filter:blur(6px);display:grid;place-items:center}
+.mute svg{width:20px;height:20px;fill:#fff}
+.reel h3{font-weight:900;font-size:clamp(26px,3.2vw,42px);line-height:1.3}
+.reel p{color:var(--night-muted);margin-top:12px;max-width:30em}
+.stats{display:flex;flex-wrap:wrap;gap:28px;margin-top:28px}
+.stats div strong{display:block;font-size:clamp(30px,3.4vw,44px);font-weight:900;color:var(--yellow);line-height:1.1}
+.stats div span{color:var(--night-muted);font-size:.9em}
+@media (max-width:760px){.reel{grid-template-columns:1fr;justify-items:center;text-align:center}.stats{justify-content:center}.reel p{margin-inline:auto}}
+
+.tabs{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:28px;position:sticky;top:68px;z-index:5;padding-block:10px;background:var(--night)}
+.tab{padding:10px 18px;border-radius:99px;border:1px solid var(--night-line);font-weight:700;font-size:.92em;color:var(--night-muted);transition:all .2s}
+.tab:hover{color:var(--night-ink);border-color:var(--night-muted)}
+.tab.on{background:var(--yellow);color:var(--ink);border-color:var(--yellow)}
+.tab em{font-style:normal;opacity:.6;font-size:.85em;margin-inline-start:4px}
+.panel{display:none}
+.panel.on{display:block;animation:fade .5s var(--ease)}
+@keyframes fade{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.panel-intro{color:var(--night-muted);margin-bottom:22px;max-width:44em}
+
+.grid-v{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:16px}
+.grid-v.wide{grid-template-columns:repeat(auto-fill,minmax(250px,1fr))}
+.vcard{position:relative;border-radius:18px;overflow:hidden;background:var(--night-2);aspect-ratio:9/16;text-align:start;isolation:isolate}
+.vcard img,.vcard video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .6s var(--ease)}
+.vcard video{opacity:0;transition:opacity .3s}
+.vcard.playing video{opacity:1}
+.vcard:hover img{transform:scale(1.04)}
+.vcard .shade{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.85) 0%,rgba(0,0,0,0) 52%);z-index:1}
+.vcard .info{position:absolute;inset-inline:0;bottom:0;padding:16px;z-index:2}
+.vcard .info strong{display:block;font-weight:800;font-size:1.08em;line-height:1.5;color:#fff}
+.vcard .info span{display:block;font-size:.82em;color:#D9CCC5;line-height:1.6}
+.vcard .tag{position:absolute;top:12px;inset-inline-start:12px;z-index:2;background:var(--yellow);color:var(--ink);font-weight:800;font-size:.72em;padding:4px 10px;border-radius:99px}
+.vcard .play{position:absolute;top:12px;inset-inline-end:12px;z-index:2;width:38px;height:38px;border-radius:50%;background:rgba(255,255,255,.18);backdrop-filter:blur(8px);display:grid;place-items:center;transition:background .2s,transform .3s var(--ease)}
+.vcard:hover .play{background:var(--yellow);transform:scale(1.08)}
+.vcard .play svg{width:14px;height:14px;fill:#fff}
+.vcard:hover .play svg{fill:var(--ink)}
+.vcard .dur{position:absolute;bottom:12px;inset-inline-end:12px;z-index:2;font-size:.75em;color:#E8DDD6;background:rgba(0,0,0,.45);padding:2px 8px;border-radius:99px}
+.grid-v.logos .vcard{aspect-ratio:9/14}
+@media (max-width:600px){
+  .grid-v,.grid-v.wide{grid-template-columns:1fr 1fr;gap:10px}
+  .vcard{border-radius:14px}
+  .vcard .info{padding:10px}
+  .vcard .info strong{font-size:.92em}
+  .vcard .info span{font-size:.72em}
+  .vcard .tag{top:8px;inset-inline-start:8px;font-size:.66em}
+  .vcard .play{top:8px;inset-inline-end:8px;width:30px;height:30px}
+  .masonry{columns:2;column-gap:10px}
+  .masonry button{margin-bottom:10px}
+  .masonry .tall-tile{height:320px}
+  .tab{padding:8px 13px;font-size:.85em}
+}
+
+.filters{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:20px}
+.filters button{padding:6px 14px;border-radius:99px;font-size:.85em;font-weight:600;color:var(--night-muted);background:var(--night-2)}
+.filters button.on{color:var(--ink);background:var(--night-ink)}
+.masonry{columns:4 220px;column-gap:14px}
+.masonry button{display:block;width:100%;margin-bottom:14px;border-radius:14px;overflow:hidden;break-inside:avoid;background:var(--night-2);position:relative}
+.masonry img{width:100%;height:auto;transition:transform .6s var(--ease),filter .3s}
+.masonry button:hover img{transform:scale(1.03)}
+.masonry button.hide{display:none}
+.masonry .logo-tile{background:#fff;padding:18% 12%}
+.masonry .logo-tile img{transform:none!important}
+.masonry .tall-tile{height:460px;display:flex;justify-content:center;padding:14px}
+.masonry .tall-tile img{height:100%;width:auto;border-radius:6px}
+
+/* skills */
+.skills-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.skill{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:clamp(22px,2.6vw,32px)}
+.skill .ic{width:52px;height:52px;border-radius:16px;display:grid;place-items:center;font-weight:900;font-size:1.05em;margin-bottom:16px;direction:ltr}
+.skill h3{font-weight:800;font-size:1.2em;margin-bottom:6px}
+.skill p{color:var(--muted);font-size:.94em}
+.skill .pills{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}
+.skill .pills span{font-size:.8em;font-weight:600;padding:3px 10px;border-radius:99px;background:var(--bg);border:1px solid var(--line)}
+.tools{display:flex;flex-wrap:wrap;gap:12px;margin-top:16px}
+.tool{display:flex;align-items:center;gap:12px;background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:10px 18px 10px 10px;font-weight:700;direction:ltr}
+.tool i{width:40px;height:40px;border-radius:10px;display:grid;place-items:center;font-style:normal;font-weight:900;font-size:.95em}
+.soft{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
+.soft span{padding:9px 18px;border-radius:99px;background:var(--ink);color:var(--bg);font-weight:600;font-size:.92em}
+.sub-h{font-weight:800;font-size:1.15em;margin-top:clamp(36px,5vw,56px)}
+@media (max-width:900px){.skills-grid{grid-template-columns:1fr 1fr}}
+@media (max-width:600px){.skills-grid{grid-template-columns:1fr}}
+
+/* contact */
+.contact{background:var(--yellow);position:relative;overflow:hidden}
+.contact .cap{position:absolute;height:90px;border-radius:99px;background:var(--crimson);opacity:.95}
+.contact .cap.a{width:340px;top:-30px;inset-inline-end:-80px;transform:rotate(-10deg)}
+.contact .cap.b{width:200px;bottom:-40px;inset-inline-start:-50px;background:var(--ink);transform:rotate(-10deg)}
+.contact h2{font-size:clamp(34px,5.6vw,72px);max-width:12em;position:relative}
+.contact .lead{color:var(--ink);opacity:.8;position:relative}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:40px;position:relative}
+.ccard{display:flex;align-items:center;gap:16px;background:var(--ink);color:var(--bg);border-radius:var(--r);padding:20px 22px;transition:transform .3s var(--ease),background .2s}
+.ccard:hover{transform:translateY(-4px);background:var(--crimson)}
+.ccard svg{width:30px;height:30px;flex:none;fill:var(--yellow)}
+.ccard span{display:block;font-size:.82em;opacity:.7}
+.ccard strong{display:block;font-weight:800;font-size:1.1em;direction:ltr;text-align:start;unicode-bidi:plaintext}
+@media (max-width:860px){.cards{grid-template-columns:1fr}}
+footer{background:var(--ink);color:#B8AAA3;padding-block:28px;font-size:.88em}
+footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+footer img{height:24px;width:auto}
+
+/* modal */
+.modal{position:fixed;inset:0;z-index:100;background:rgba(10,7,8,.92);backdrop-filter:blur(10px);display:none;align-items:center;justify-content:center;padding:16px}
+.modal.open{display:flex;animation:fade .3s var(--ease)}
+.m-body{position:relative;display:flex;flex-direction:column;align-items:center;gap:14px;max-width:100%;max-height:100%}
+.m-body video{max-height:calc(100dvh - 150px);max-width:min(92vw,1100px);border-radius:16px;background:#000}
+.m-body img{max-height:calc(100dvh - 110px);max-width:min(94vw,1400px);border-radius:10px;object-fit:contain}
+.m-body img.wide{max-height:none;max-width:min(94vw,1600px)}
+.m-body img.tall{max-height:none;width:min(88vw,420px);max-width:none}
+.m-scroll{overflow:auto;max-height:calc(100dvh - 100px);border-radius:10px}
+.m-title{color:#fff;text-align:center;font-weight:700}
+.m-title span{display:block;color:var(--night-muted);font-weight:500;font-size:.85em}
+.m-switch{display:flex;background:rgba(255,255,255,.08);border-radius:99px;padding:4px}
+.m-switch button{padding:8px 18px;border-radius:99px;color:#D9CCC5;font-weight:700;font-size:.9em}
+.m-switch button.on{background:var(--yellow);color:var(--ink)}
+.x,.nav-btn{position:fixed;width:48px;height:48px;border-radius:50%;background:rgba(255,255,255,.12);display:grid;place-items:center;z-index:2;transition:background .2s}
+.x:hover,.nav-btn:hover{background:var(--yellow)}
+.x svg,.nav-btn svg{width:20px;height:20px;stroke:#fff;stroke-width:2.4;fill:none}
+.x:hover svg,.nav-btn:hover svg{stroke:var(--ink)}
+.x{top:16px;inset-inline-end:16px}
+.nav-btn.prev{inset-inline-start:16px;top:50%}
+.nav-btn.next{inset-inline-end:16px;top:50%}
+html[dir=rtl] .nav-btn.prev svg{transform:scaleX(-1)}
+html[dir=ltr] .nav-btn.next svg{transform:scaleX(-1)}
+@media (max-width:700px){.nav-btn{top:auto!important;bottom:16px}}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(26px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
+.rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}.rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <div class="wrap">
+    <a class="logo" href="#top" aria-label="Farhadgrafik"><img src="assets/img/logo.webp" alt="Farhadgrafik" width="142" height="30"></a>
+    <ul>
+      <li><a href="#about"><span lang="fa">درباره من</span><span lang="en">About</span></a></li>
+      <li><a href="#experience"><span lang="fa">سوابق</span><span lang="en">Experience</span></a></li>
+      <li><a href="#works"><span lang="fa">نمونه‌کارها</span><span lang="en">Work</span></a></li>
+      <li><a href="#skills"><span lang="fa">مهارت‌ها</span><span lang="en">Skills</span></a></li>
+      <li><a href="#contact"><span lang="fa">تماس</span><span lang="en">Contact</span></a></li>
+    </ul>
+    <div class="lang" role="group" aria-label="Language">
+      <button data-l="fa" class="on">فا</button><button data-l="en">EN</button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-text">
+      <div class="kicker"><i></i><i></i>
+        <span lang="fa">طراح گرافیک · تدوینگر · موشن گرافیست</span>
+        <span lang="en">Graphic Designer · Video Editor · Motion Designer</span>
+      </div>
+      <h1><span lang="fa">فرهاد<br><span class="y">حکمت‌دوست</span></span><span lang="en">Farhad<br><span class="y">Hekmatdoust</span></span></h1>
+      <p class="lead">
+        <span lang="fa">ایده‌ها رو به تصویر و ویدیویی تبدیل می‌کنم که دیده بشه؛ از پست و پوستر و بنر تا تدوین، استوری‌موشن و لوگوموشن.</span>
+        <span lang="en">I turn ideas into visuals and videos that get noticed — from posts, posters and banners to video editing, story motion and logo animation.</span>
+      </p>
+      <div class="chips">
+        <span class="chip"><b></b><span lang="fa">۲۶ ساله</span><span lang="en">26 years old</span></span>
+        <span class="chip"><b></b><span lang="fa">ساکن تهران</span><span lang="en">Based in Tehran</span></span>
+        <span class="chip"><b></b><span lang="fa">کارشناسی گرافیک · معدل ۱۸</span><span lang="en">BA Graphic Design · GPA 18/20</span></span>
+        <span class="chip"><b></b><span lang="fa">پایان خدمت</span><span lang="en">Military service completed</span></span>
+      </div>
+      <div class="ctas">
+        <a class="btn pri" href="#works"><span lang="fa">دیدن نمونه‌کارها</span><span lang="en">See my work</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12l7 7 7-7"/></svg></a>
+        <a class="btn ghost" href="#contact"><span lang="fa">تماس با من</span><span lang="en">Get in touch</span></a>
+      </div>
+    </div>
+    <div class="hero-art">
+      <div class="blob"></div>
+      <div class="cap c1"></div><div class="cap c2"></div>
+      <img src="assets/img/farhad.webp" alt="Farhad Hekmatdoust" width="900" height="1273" fetchpriority="high">
+      <div class="badge"><strong class="num"><span lang="fa">+۲</span><span lang="en">2+</span></strong>
+        <div><span lang="fa">سال تجربه<br>شرکتی و فریلنس</span><span lang="en">years of studio<br>&amp; freelance work</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="sec" id="about">
+  <div class="wrap about-grid">
+    <div class="about-text rv">
+      <div class="eyebrow"><span lang="fa">درباره من</span><span lang="en">About me</span></div>
+      <h2 style="margin-bottom:24px"><span lang="fa">سلام، من فرهادم 👋</span><span lang="en">Hi, I’m Farhad 👋</span></h2>
+      <div lang="fa">
+        <p>من <strong>فرهاد حکمت‌دوست</strong> هستم، ۲۶ ساله، ساکن تهران و دارای <strong>مدرک کارشناسی گرافیک با معدل ۱۸</strong>.</p>
+        <p>از سال ۱۴۰۲ به‌صورت حرفه‌ای کار می‌کنم؛ هم در <strong>شرکت سیمو کابل ایوان</strong> به‌عنوان گرافیست، تدوینگر و موشن گرافیست، و هم به‌صورت فریلنسری برای برندها و پیج‌های مختلف.</p>
+        <p>طراحی پست، استوری، بنر و پوستر، تدوین ویدیو، استوری‌موشن و لوگوموشن کارهای اصلی من هستند و از ابزارهای هوش مصنوعی هم برای سریع‌تر و خلاقانه‌تر شدن کار استفاده می‌کنم. سعی می‌کنم هر پروژه هویت بصری خودش رو داشته باشه، نه یک قالب تکراری.</p>
+        <p>اهل کار تیمی و همکاری هستم و از بازخورد گرفتن برای بهتر شدن کار استقبال می‌کنم.</p>
+      </div>
+      <div lang="en">
+        <p>I’m <strong>Farhad Hekmatdoust</strong>, 26, based in Tehran, with a <strong>BA in Graphic Design (GPA 18/20)</strong>.</p>
+        <p>I’ve been working professionally since 2023 — in-house at <strong>Simo Cable Ivan</strong> as a graphic designer, video editor and motion designer, and as a freelancer for brands and Instagram pages.</p>
+        <p>My core work is posts, stories, banners and posters, video editing, story motion and logo animation, and I use AI tools to work faster and push ideas further. I aim to give every project its own visual identity, never a recycled template.</p>
+        <p>I enjoy teamwork, collaborate easily and welcome feedback that makes the work better.</p>
+      </div>
+    </div>
+    <div class="facts rv">
+      <div class="fact"><span lang="fa">تحصیلات</span><span lang="en">Education</span><strong><span lang="fa">کارشناسی گرافیک<br>معدل ۱۸</span><span lang="en">BA Graphic Design<br>GPA 18 / 20</span></strong></div>
+      <div class="fact"><span lang="fa">محل زندگی</span><span lang="en">Location</span><strong><span lang="fa">تهران</span><span lang="en">Tehran, Iran</span></strong></div>
+      <div class="fact"><span lang="fa">سن</span><span lang="en">Age</span><strong><span lang="fa">۲۶ سال</span><span lang="en">26</span></strong></div>
+      <div class="fact"><span lang="fa">نظام وظیفه</span><span lang="en">Military service</span><strong><span lang="fa">پایان خدمت</span><span lang="en">Completed</span></strong></div>
+      <div class="fact big" id="counts"></div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section class="sec" id="experience" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div><div class="eyebrow"><span lang="fa">سوابق کاری</span><span lang="en">Experience</span></div>
+      <h2><span lang="fa">کجا کار کرده‌ام</span><span lang="en">Where I’ve worked</span></h2></div>
+    </div>
+    <div class="tl">
+      <article class="job rv">
+        <div class="when num"><span lang="fa">۱۴۰۲ — ۱۴۰۴</span><span lang="en">2023 — 2025</span><small><span lang="fa">تمام‌وقت، حضوری</span><span lang="en">Full-time, in-house</span></small></div>
+        <div>
+          <h3><span lang="fa">شرکت سیمو کابل ایوان</span><span lang="en">Simo Cable Ivan</span></h3>
+          <div class="role"><span lang="fa">گرافیست، تدوینگر و موشن گرافیست</span><span lang="en">Graphic Designer, Video Editor &amp; Motion Designer</span></div>
+          <ul lang="fa"><li>طراحی محتوای گرافیکی شرکت: پست، استوری، بنر و تبلیغات</li><li>تدوین ویدیوهای شرکت و آماده‌سازی برای شبکه‌های اجتماعی</li><li>ساخت موشن‌گرافیک و انیمیشن برای معرفی محصولات و خدمات</li></ul>
+          <ul lang="en"><li>Designed the company’s graphic content: posts, stories, banners and ads</li><li>Edited company videos and prepared them for social media</li><li>Created motion graphics to present products and services</li></ul>
+        </div>
+      </article>
+      <article class="job rv">
+        <div class="when num"><span lang="fa">۱۴۰۲ — ۱۴۰۴</span><span lang="en">2023 — 2025</span><small><span lang="fa">فریلنس، دورکاری</span><span lang="en">Freelance, remote</span></small></div>
+        <div>
+          <h3><span lang="fa">فریلنسر</span><span lang="en">Freelance</span></h3>
+          <div class="role"><span lang="fa">طراح گرافیک و موشن برای کسب‌وکارها و پیج‌ها</span><span lang="en">Graphic &amp; motion designer for businesses and pages</span></div>
+          <ul lang="fa"><li>طراحی پست، استوری، کاور ریلز و تامنیل برای پیج‌های اینستاگرام</li><li>طراحی بنرهای تبلیغاتی وب و چاپی در ابعاد استاندارد</li><li>استوری‌موشن، لوگوموشن و تدوین ویدیوهای تبلیغاتی</li></ul>
+          <ul lang="en"><li>Posts, stories, Reels covers and thumbnails for Instagram pages</li><li>Web and print ad banners in standard sizes</li><li>Story motion, logo animation and promo video editing</li></ul>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- WORKS -->
+<section class="sec works" id="works">
+  <div class="wrap">
+    <div class="reel rv">
+      <div class="phone">
+        <video id="reelVid" src="assets/v/showreel.mp4" poster="assets/p/showreel.webp" autoplay muted loop playsinline preload="metadata"></video>
+        <button class="mute" id="reelMute" aria-label="Sound on/off"><svg viewBox="0 0 24 24" id="muteIc"></svg></button>
+      </div>
+      <div>
+        <div class="eyebrow"><span lang="fa">شوریل</span><span lang="en">Showreel</span></div>
+        <h3><span lang="fa">در ۲۷ ثانیه، خلاصه‌ی کارهای من</span><span lang="en">My work in 27 seconds</span></h3>
+        <p><span lang="fa">قبل و بعدِ چند پروژه‌ی تدوین و موشن. برای شنیدن صدا، دکمه‌ی بلندگو رو بزنید.</span><span lang="en">Before-and-after flips from my editing and motion projects. Tap the speaker to turn the sound on.</span></p>
+        <div class="stats" id="stats"></div>
+      </div>
+    </div>
+
+    <div class="sec-head rv">
+      <div><div class="eyebrow"><span lang="fa">نمونه‌کارها</span><span lang="en">Selected work</span></div>
+      <h2><span lang="fa">کارهایی که ساخته‌ام</span><span lang="en">Things I’ve made</span></h2></div>
+      <p><span lang="fa">روی هر کار بزنید تا بزرگ باز بشه. در پروژه‌های ویدیویی، «قبل و بعد» رو هم ببینید.</span><span lang="en">Tap any piece to open it. For video projects, check the before-and-after too.</span></p>
+    </div>
+
+    <div class="tabs" role="tablist" id="tabs"></div>
+    <div id="panels"></div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section class="sec" id="skills">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div><div class="eyebrow"><span lang="fa">مهارت‌ها</span><span lang="en">Skills</span></div>
+      <h2><span lang="fa">چه کارهایی از دستم برمیاد</span><span lang="en">What I can do for you</span></h2></div>
+    </div>
+    <div class="skills-grid">
+      <div class="skill rv"><div class="ic" style="background:var(--yellow)">Aa</div>
+        <h3><span lang="fa">طراحی گرافیک</span><span lang="en">Graphic design</span></h3>
+        <p><span lang="fa">طراحی برای شبکه‌های اجتماعی، تبلیغات وب و چاپ.</span><span lang="en">Design for social media, web ads and print.</span></p>
+        <div class="pills" lang="fa"><span>پست</span><span>استوری</span><span>بنر</span><span>پوستر</span><span>کاور و تامنیل</span><span>لوگو</span></div>
+        <div class="pills" lang="en"><span>Posts</span><span>Stories</span><span>Banners</span><span>Posters</span><span>Covers &amp; thumbnails</span><span>Logos</span></div></div>
+      <div class="skill rv"><div class="ic" style="background:var(--crimson);color:#fff">▶</div>
+        <h3><span lang="fa">تدوین و موشن</span><span lang="en">Editing &amp; motion</span></h3>
+        <p><span lang="fa">تدوین ریلز و ویدیوی تبلیغاتی، زیرنویس پویا، استوری‌موشن و لوگوموشن.</span><span lang="en">Reels and promo editing, animated captions, story motion and logo animation.</span></p>
+        <div class="pills" lang="fa"><span>تدوین ریلز</span><span>موشن‌گرافیک</span><span>استوری‌موشن</span><span>لوگوموشن</span><span>زیرنویس</span></div>
+        <div class="pills" lang="en"><span>Reels editing</span><span>Motion graphics</span><span>Story motion</span><span>Logo motion</span><span>Captions</span></div></div>
+      <div class="skill rv"><div class="ic" style="background:var(--ink);color:var(--yellow)">AI</div>
+        <h3><span lang="fa">تصویرسازی و هوش مصنوعی</span><span lang="en">Illustration &amp; AI</span></h3>
+        <p><span lang="fa">تصویرسازی، و استفاده از ابزارهای هوش مصنوعی برای ساخت تصویر و ویدیو.</span><span lang="en">Illustration, plus AI tools to create images and video.</span></p>
+        <div class="pills" lang="fa"><span>تصویرسازی</span><span>تصویر با AI</span><span>ویدیو با AI</span></div>
+        <div class="pills" lang="en"><span>Illustration</span><span>AI images</span><span>AI video</span></div></div>
+    </div>
+    <h3 class="sub-h rv"><span lang="fa">نرم‌افزارها</span><span lang="en">Tools</span></h3>
+    <div class="tools rv">
+      <div class="tool"><i style="background:#001E36;color:#31A8FF">Ps</i>Photoshop</div>
+      <div class="tool"><i style="background:#00005B;color:#9999FF">Ae</i>After Effects</div>
+      <div class="tool"><i style="background:var(--ink);color:var(--yellow)">AI</i><span lang="fa">ابزارهای هوش مصنوعی</span><span lang="en">AI tools</span></div>
+    </div>
+    <h3 class="sub-h rv"><span lang="fa">ویژگی‌های فردی</span><span lang="en">Soft skills</span></h3>
+    <div class="soft rv" lang="fa"><span>کار تیمی</span><span>روحیه‌ی همکاری</span><span>پذیرش بازخورد</span><span>ایده‌پردازی</span></div>
+    <div class="soft rv" lang="en"><span>Teamwork</span><span>Collaboration</span><span>Open to feedback</span><span>Idea generation</span></div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="sec contact" id="contact">
+  <div class="cap a"></div><div class="cap b"></div>
+  <div class="wrap">
+    <div class="eyebrow" style="color:var(--crimson)"><span lang="fa">تماس</span><span lang="en">Contact</span></div>
+    <h2 class="rv"><span lang="fa">بیاید با هم یه کار خوب بسازیم.</span><span lang="en">Let’s make something good together.</span></h2>
+    <p class="lead rv"><span lang="fa">برای همکاری تمام‌وقت، پاره‌وقت یا پروژه‌ای، از هر کدوم از این راه‌ها پیام بدید.</span><span lang="en">For full-time, part-time or project work, reach me any of these ways.</span></p>
+    <div class="cards">
+      <a class="ccard rv" href="tel:+989336774242">
+        <svg viewBox="0 0 24 24"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg>
+        <div><span lang="fa">تلفن</span><span lang="en">Phone</span><strong lang="fa">۰۹۳۳ ۶۷۷ ۴۲۴۲</strong><strong lang="en">+98 933 677 4242</strong></div></a>
+      <a class="ccard rv" href="https://t.me/farhadgrafik" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24"><path d="M21.9 4.3 18.7 19.4c-.24 1.06-.87 1.32-1.76.82l-4.86-3.58-2.35 2.26c-.26.26-.48.48-.98.48l.35-4.96 9.02-8.15c.39-.35-.09-.54-.61-.2L6.36 13.1 1.56 11.6c-1.04-.33-1.06-1.04.22-1.54l18.75-7.23c.87-.32 1.63.2 1.37 1.47z"/></svg>
+        <div><span lang="fa">تلگرام</span><span lang="en">Telegram</span><strong>@farhadgrafik</strong></div></a>
+      <a class="ccard rv" href="https://instagram.com/farhadgrafik" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24"><path d="M12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm0 8.2a3.2 3.2 0 1 1 0-6.4 3.2 3.2 0 0 1 0 6.4zM17.3 5.5a1.2 1.2 0 1 0 0 2.4 1.2 1.2 0 0 0 0-2.4zM12 2c-2.7 0-3.05 0-4.12.06C4.7 2.2 2.2 4.7 2.06 7.88 2 8.95 2 9.3 2 12s0 3.05.06 4.12c.15 3.18 2.65 5.68 5.82 5.82C8.95 22 9.3 22 12 22s3.05 0 4.12-.06c3.18-.15 5.68-2.65 5.82-5.82C22 15.05 22 14.7 22 12s0-3.05-.06-4.12C21.8 4.7 19.3 2.2 16.12 2.06 15.05 2 14.7 2 12 2zm0 1.8c2.67 0 2.98 0 4.04.06 2.27.1 3.99 1.82 4.1 4.1.05 1.05.06 1.37.06 4.04s0 2.98-.06 4.04c-.1 2.27-1.83 4-4.1 4.1-1.06.05-1.37.06-4.04.06s-2.98 0-4.04-.06c-2.28-.1-4-1.83-4.1-4.1C3.8 14.98 3.8 14.67 3.8 12s0-2.98.06-4.04c.1-2.28 1.82-4 4.1-4.1C9.02 3.8 9.33 3.8 12 3.8z"/></svg>
+        <div><span lang="fa">اینستاگرام</span><span lang="en">Instagram</span><strong>@farhadgrafik</strong></div></a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer><div class="wrap">
+  <img src="assets/img/logo.webp" alt="Farhadgrafik" width="114" height="24">
+  <span><span lang="fa">© ۱۴۰۵ فرهاد حکمت‌دوست</span><span lang="en">© 2026 Farhad Hekmatdoust</span></span>
+</div></footer>
+
+<div class="modal" id="modal" role="dialog" aria-modal="true">
+  <button class="x" id="mClose" aria-label="Close"><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+  <button class="nav-btn prev" id="mPrev" aria-label="Previous"><svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg></button>
+  <button class="nav-btn next" id="mNext" aria-label="Next"><svg viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"/></svg></button>
+  <div class="m-body" id="mBody"></div>
+</div>
+
+<script src="assets/data.js"></script>
+<script>
+(function(){
+const D = window.SITE_DATA;
+const $ = (s, r=document) => r.querySelector(s);
+const html = document.documentElement;
+let lang = 'fa';
+try { lang = new URLSearchParams(location.search).get('lang') || localStorage.getItem('fg-lang') || 'fa'; } catch(e) {}
+if (lang !== 'en') lang = 'fa';
+const T = (fa, en) => `<span lang="fa">${fa}</span><span lang="en">${en}</span>`;
+const fa = n => String(n).replace(/\d/g, d => '۰۱۲۳۴۵۶۷۸۹'[d]);
+const N = n => T(fa(n), n);
+function setLang(l){
+  lang = l; html.lang = l; html.dir = l === 'fa' ? 'rtl' : 'ltr';
+  document.title = l === 'fa' ? 'فرهاد حکمت‌دوست | Farhadgrafik' : 'Farhad Hekmatdoust | Farhadgrafik';
+  document.querySelectorAll('.lang button').forEach(b => b.classList.toggle('on', b.dataset.l === l));
+  try { localStorage.setItem('fg-lang', l); } catch(e) {}
+}
+document.querySelectorAll('.lang button').forEach(b => b.onclick = () => setLang(b.dataset.l));
+setLang(lang);
+
+/* ---------- content ---------- */
+const PROJ = {
+  r6:  ['پادکست انگیزشی', 'Motivational podcast', 'تدوین تاکینگ‌هد با زیرنویس پویا', 'Talking-head edit with kinetic captions'],
+  r5:  ['تورنومنت مافیا', 'Mafia tournament', 'تبلیغ با کروماکی صفحه‌ی لپ‌تاپ', 'Green-screen laptop ad'],
+  r7:  ['اعتماد', 'Trust', 'تاکینگ‌هد با استایل نئون و شیشه', 'Neon-glass talking head'],
+  r9:  ['مجله‌ی زنده', 'Living magazine', 'تاکینگ‌هد مجله‌ای با تایپوگرافی', 'Magazine-style talking head'],
+  r1:  ['معرفی محصول ژله', 'Jelly product launch', 'ویدیوی معرفی محصول', 'Product launch video'],
+  r8:  ['چکیده‌ی مقاله', 'The abstract', 'موشن کاغذی روی صدا', 'Paper-craft motion on voice-over'],
+  r10: ['رم لپ‌تاپ', 'Laptop RAM', 'موشن تبلیغاتی روی صدا', 'Promo motion on voice-over'],
+  r11: ['زندگی', 'Life', 'موشن داستانی روی صدا', 'Story-driven motion on voice-over'],
+};
+const ORDER = ['r6','r5','r7','r9','r1','r11','r10','r8'];
+const V = {}; D.videos.forEach(v => V[v.id] = v);
+const IMGS = D.images;
+const stories = D.videos.filter(v => v.group === 'story');
+const logos = D.videos.filter(v => v.group === 'logomotion');
+const IMG_CATS = [
+  ['all','همه','All'],['posts','پست','Posts'],['stories','استوری','Stories'],['covers','کاور و تامنیل','Covers'],
+  ['banners','بنر','Banners'],['posters','پوستر','Posters'],['illus','تصویرسازی','Illustration'],['logos','لوگو','Logos']];
+const TABS = [
+  ['video', 'تدوین و موشن', 'Editing & motion', ORDER.length],
+  ['story', 'استوری‌موشن', 'Story motion', stories.length],
+  ['logo', 'لوگوموشن', 'Logo motion', logos.length],
+  ['graphic', 'گرافیک', 'Graphic design', IMGS.length],
+];
+const total = ORDER.length + stories.length + logos.length;
+
+$('#counts').innerHTML = [[IMGS.length,'طرح گرافیک','graphic designs'],[stories.length + logos.length,'استوری و لوگوموشن','motion pieces'],[ORDER.length,'پروژه‌ی ویدیویی','video projects']]
+  .map(([n,a,b]) => `<div><strong>${N(n)}</strong><span>${T(a,b)}</span></div>`).join('');
+$('#stats').innerHTML = [[total,'ویدیو و موشن','videos & motion'],[IMGS.length,'طرح گرافیک','designs'],['3+','سال تجربه','years']]
+  .map(([n,a,b]) => `<div><strong>${typeof n === 'number' ? N(n) : T('+۲','2+')}</strong><span>${T(a,b)}</span></div>`).join('');
+
+const playSvg = '<svg viewBox="0 0 24 24"><path d="M7 4.5v15l13-7.5z"/></svg>';
+const dur = s => { s = Math.round(s); const t = Math.floor(s/60) + ':' + String(s%60).padStart(2,'0'); return T(fa(t), t); };
+function vcard(v, title, sub, tag, idx, list){
+  return `<button class="vcard" data-list="${list}" data-i="${idx}" data-v="${v.id}">
+    <img src="assets/p/${v.id}.webp" alt="" loading="lazy" decoding="async">
+    <div class="shade"></div>${tag ? `<span class="tag">${tag}</span>` : ''}
+    <span class="play">${playSvg}</span>
+    ${title ? `<div class="info"><strong>${title}</strong><span>${sub}</span></div>` : `<span class="dur">${dur(v.dur)}</span>`}
+  </button>`;
+}
+const LISTS = {
+  video: ORDER.map(k => ({type:'proj', k})),
+  story: stories.map(v => ({type:'vid', v})),
+  logo: logos.map(v => ({type:'vid', v})),
+  graphic: IMGS.map(im => ({type:'img', im})),
+};
+const panels = {
+  video: `<p class="panel-intro">${T('تدوین ویدیوهای تاکینگ‌هد و ساخت موشن روی صدا. هر پروژه سبک، رنگ و فونت مخصوص خودش رو داره. داخل هر کار، دکمه‌ی «قبل و بعد» فیلم خام رو کنار نتیجه نشون می‌ده.','Talking-head edits and motion pieces built on a voice-over. Every project has its own style, colours and type. Inside each one, “Before / After” shows the raw footage next to the result.')}</p>
+    <div class="grid-v wide">${ORDER.map((k,i) => vcard(V[k], T(PROJ[k][0],PROJ[k][1]), T(PROJ[k][2],PROJ[k][3]), T('قبل و بعد','Before / After'), i, 'video')).join('')}</div>`,
+  story: `<p class="panel-intro">${T('استوری‌موشن‌های تبلیغاتی برای پیج‌ها و کسب‌وکارها.','Animated promo stories for pages and businesses.')}</p>
+    <div class="grid-v">${stories.map((v,i) => vcard(v, '', '', '', i, 'story')).join('')}</div>`,
+  logo: `<p class="panel-intro">${T('انیمیشن لوگو برای معرفی برند در ابتدا یا انتهای ویدیو.','Logo animations to open or close a brand’s videos.')}</p>
+    <div class="grid-v logos">${logos.map((v,i) => vcard(v, '', '', '', i, 'logo')).join('')}</div>`,
+  graphic: `<div class="filters">${IMG_CATS.map(([k,a,b],i) => `<button data-f="${k}" class="${i?'':'on'}">${T(a,b)}</button>`).join('')}</div>
+    <div class="masonry">${IMGS.map((im,i) => `<button data-list="graphic" data-i="${i}" data-g="${im.group}" class="${im.group==='logos'?'logo-tile':(im.h/im.w>2.6?'tall-tile':'')}">
+      <img src="assets/g/${im.id}-t.webp" width="${im.tw}" height="${im.th}" alt="" loading="lazy" decoding="async"></button>`).join('')}</div>`,
+};
+$('#tabs').innerHTML = TABS.map(([k,a,b,n],i) => `<button class="tab${i?'':' on'}" role="tab" data-t="${k}">${T(a,b)}<em>${N(n)}</em></button>`).join('');
+$('#panels').innerHTML = TABS.map(([k],i) => `<div class="panel${i?'':' on'}" data-p="${k}">${panels[k]}</div>`).join('');
+$('#tabs').onclick = e => {
+  const b = e.target.closest('.tab'); if (!b) return;
+  document.querySelectorAll('.tab').forEach(t => t.classList.toggle('on', t === b));
+  document.querySelectorAll('.panel').forEach(p => p.classList.toggle('on', p.dataset.p === b.dataset.t));
+  const top = $('#tabs').getBoundingClientRect().top;
+  if (top < 60) window.scrollBy({top: top - 80, behavior: 'smooth'});
+};
+document.querySelector('.filters').onclick = e => {
+  const b = e.target.closest('button'); if (!b) return;
+  document.querySelectorAll('.filters button').forEach(x => x.classList.toggle('on', x === b));
+  document.querySelectorAll('.masonry button').forEach(x => x.classList.toggle('hide', b.dataset.f !== 'all' && x.dataset.g !== b.dataset.f));
+};
+
+/* hover preview on desktop */
+const canHover = matchMedia('(hover:hover) and (pointer:fine)').matches;
+if (canHover) document.addEventListener('mouseover', e => {
+  const c = e.target.closest('.vcard'); if (!c || c.dataset.hv) return;
+  c.dataset.hv = 1;
+  const vid = document.createElement('video');
+  vid.src = 'assets/v/' + c.dataset.v + '.mp4'; vid.muted = true; vid.loop = true; vid.playsInline = true; vid.preload = 'auto';
+  c.insertBefore(vid, c.querySelector('.shade'));
+  const go = () => { if (c.matches(':hover')) { vid.play().then(() => c.classList.add('playing')).catch(()=>{}); } };
+  vid.addEventListener('canplay', go, {once:true});
+  c.addEventListener('mouseenter', go);
+  c.addEventListener('mouseleave', () => { vid.pause(); c.classList.remove('playing'); });
+});
+
+/* ---------- modal ---------- */
+const modal = $('#modal'), body = $('#mBody');
+let cur = null;
+function open(list, i){
+  const L = LISTS[list]; i = (i + L.length) % L.length; cur = {list, i};
+  const it = L[i]; let h = '';
+  if (it.type === 'proj') {
+    const p = PROJ[it.k];
+    h = `<video id="mv" src="assets/v/${it.k}.mp4" poster="assets/p/${it.k}.webp" controls autoplay playsinline></video>
+      <div class="m-switch"><button class="on" data-s="${it.k}">${T('نسخه‌ی نهایی','Final edit')}</button><button data-s="${it.k}-ba">${T('قبل و بعد','Before / After')}</button></div>
+      <div class="m-title">${T(p[0],p[1])}<span>${T(p[2],p[3])}</span></div>`;
+  } else if (it.type === 'vid') {
+    h = `<video id="mv" src="assets/v/${it.v.id}.mp4" poster="assets/p/${it.v.id}.webp" controls autoplay playsinline ${it.v.group==='logomotion'?'loop':''}></video>`;
+  } else {
+    const im = it.im, wide = im.w / im.h > 2.6, tall = im.h / im.w > 2.6;
+    h = tall ? `<div class="m-scroll"><img class="tall" src="assets/g/${im.id}.webp" alt=""></div>` : `<img class="${wide ? 'wide' : ''}" src="assets/g/${im.id}.webp" alt="">`;
+  }
+  body.innerHTML = h;
+  const sw = body.querySelector('.m-switch');
+  if (sw) sw.onclick = e => {
+    const b = e.target.closest('button'); if (!b) return;
+    sw.querySelectorAll('button').forEach(x => x.classList.toggle('on', x === b));
+    const mv = $('#mv'); mv.src = 'assets/v/' + b.dataset.s + '.mp4'; mv.poster = 'assets/p/' + b.dataset.s + '.webp'; mv.play().catch(()=>{});
+  };
+  if (!modal.classList.contains('open')) { modal.classList.add('open'); document.body.style.overflow = 'hidden'; reel.pause(); }
+}
+function close(){ modal.classList.remove('open'); body.innerHTML = ''; document.body.style.overflow = ''; cur = null; if (reelVisible) reel.play().catch(()=>{}); }
+document.addEventListener('click', e => {
+  const c = e.target.closest('[data-list]'); if (c && !modal.contains(c)) open(c.dataset.list, +c.dataset.i);
+});
+$('#mClose').onclick = close;
+modal.addEventListener('click', e => { if (e.target === modal || e.target === body) close(); });
+const step = d => { if (!cur) return; let i = cur.i;
+  if (cur.list === 'graphic') { const vis = [...document.querySelectorAll('.masonry button')].filter(b => !b.classList.contains('hide')).map(b => +b.dataset.i);
+    let k = vis.indexOf(i) + d; k = (k + vis.length) % vis.length; open('graphic', vis[k]); }
+  else open(cur.list, i + d); };
+$('#mPrev').onclick = () => step(-1); $('#mNext').onclick = () => step(1);
+document.addEventListener('keydown', e => {
+  if (!cur) return;
+  if (e.key === 'Escape') close();
+  const fwd = html.dir === 'rtl' ? 'ArrowLeft' : 'ArrowRight', back = html.dir === 'rtl' ? 'ArrowRight' : 'ArrowLeft';
+  if (e.key === fwd) step(1); if (e.key === back) step(-1);
+});
+let tx = 0; modal.addEventListener('touchstart', e => tx = e.touches[0].clientX, {passive:true});
+modal.addEventListener('touchend', e => { const dx = e.changedTouches[0].clientX - tx; if (Math.abs(dx) > 60 && !e.target.closest('video')) step((dx < 0) === (html.dir === 'ltr') ? 1 : -1); });
+
+/* ---------- showreel ---------- */
+const reel = $('#reelVid'), muteIc = $('#muteIc');
+const ICON = {off:'<path d="M3 9v6h4l5 5V4L7 9H3zm13.6 3 2.7-2.7-1.4-1.4-2.7 2.7-2.7-2.7-1.4 1.4 2.7 2.7-2.7 2.7 1.4 1.4 2.7-2.7 2.7 2.7 1.4-1.4z"/>', on:'<path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3A4.5 4.5 0 0 0 14 8v8a4.5 4.5 0 0 0 2.5-4zM14 3.2v2.1a7 7 0 0 1 0 13.4v2.1a9 9 0 0 0 0-17.6z"/>'};
+muteIc.innerHTML = ICON.off;
+$('#reelMute').onclick = () => { reel.muted = !reel.muted; muteIc.innerHTML = reel.muted ? ICON.off : ICON.on; if (!reel.muted) { reel.currentTime = 0; reel.play(); } };
+let reelVisible = false;
+new IntersectionObserver(([en]) => { reelVisible = en.isIntersecting; if (reelVisible && !cur) reel.play().catch(()=>{}); else reel.pause(); }, {threshold:.25}).observe(reel);
+
+/* ---------- nav + reveal ---------- */
+const nav = $('#nav');
+addEventListener('scroll', () => nav.classList.toggle('solid', scrollY > 30), {passive:true});
+const io = new IntersectionObserver(es => es.forEach(en => { if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } }), {rootMargin:'0px 0px -8% 0px'});
+document.querySelectorAll('.rv').forEach(el => io.observe(el));
+})();
+</script>
+</body>
+</html>
